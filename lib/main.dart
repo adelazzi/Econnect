@@ -1,4 +1,3 @@
-import 'package:econnect/screens/Root/Home_page.dart';
 import 'package:econnect/screens/Root/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:econnect/utils/app_style.dart';

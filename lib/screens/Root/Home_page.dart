@@ -1,12 +1,10 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:econnect/screens/Root/notification.dart';
 
 import '../../constant.dart';
 import '../../widgets/search_bar.dart';
-import '../../widgets/topage.dart';
 import 'home_pages/Blogs Screen.dart';
 import 'home_pages/Media.dart';
 import 'home_pages/game.dart';
@@ -71,7 +69,7 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.only(left: 15),
             child: GestureDetector(
               onTap: () {
-                //Navigator.push(context, MaterialPageRoute(builder: (context) {return profile();}),);
+                Navigator.push(context, MaterialPageRoute(builder: (context) {return profile();}),);
               },
               child: const CircleAvatar(
                 backgroundImage: AssetImage("assets/image.png"),

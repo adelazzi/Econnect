@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../constant.dart';
-import '../../widgets/Bloge.dart';
-import 'Home_page.dart';
-
 
 class event extends StatelessWidget {
   const event({super.key});
