@@ -1,0 +1,56 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
+import 'package:flutter/material.dart';
+import 'package:econnect/utils/app_style.dart';
+
+class StarsStepper extends StatefulWidget {
+  const StarsStepper(
+      {super.key,
+      required this.totalSteps,
+      this.currentSteps,
+      required this.clickable});
+  final int totalSteps;
+  final int? currentSteps;
+  final bool clickable;
+
+  @override
+  State<StarsStepper> createState() => _StarsStepperState();
+}
+
+class _StarsStepperState extends State<StarsStepper> {
+  int _currentStep = 0;
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> iconButtonWidgets = [];
+
+    for (int i = 0; i < widget.totalSteps; i++) {
+      iconButtonWidgets.add(
+        Container(
+          margin: EdgeInsets.all((5)),
+          child: GestureDetector(
+            onTap: () {
+              (widget.clickable)
+                  ? setState(() {
+                      _currentStep = i;
+                    })
+                  : () {};
+            },
+            child: Icon(
+              FluentIcons.star_24_filled,
+              color: (i >=
+                      ((widget.clickable)
+                          ? _currentStep + 1
+                          : widget.currentSteps!))
+                  ? Styles.disabledColor
+                  : Styles.primaryColor,
+              size: (20),
+            ),
+          ),
+        ),
+      );
+    }
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: iconButtonWidgets,
+    );
+  }
+}
