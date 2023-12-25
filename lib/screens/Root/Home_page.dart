@@ -4,13 +4,13 @@ import 'package:gap/gap.dart';
 import 'package:econnect/screens/Root/notification.dart';
 
 import '../../constant.dart';
+import '../../widgets/NavBar.dart';
 import '../../widgets/search_bar.dart';
 import 'home_pages/Blogs Screen.dart';
 import 'home_pages/Media.dart';
 import 'home_pages/game.dart';
 import 'home_pages/home.dart';
 import 'notready.dart';
-import 'profile.dart';
 
 class Home extends StatefulWidget {
   Home({super.key});
@@ -65,17 +65,19 @@ class _HomeState extends State<Home> {
     appBar: AppBar(
         actions: [
           // User icon
-          Padding(
-            padding: EdgeInsets.only(left: 15),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {return profile();}),);
-              },
-              child: const CircleAvatar(
-                backgroundImage: AssetImage("assets/image.png"),
-                radius: 19,
-              ),
-            ),
+          Builder(
+            builder: (BuildContext builderContext) {
+              return Padding(
+                padding: EdgeInsets.only(left: 15),
+                child: InkWell(
+                  onTap: () => Scaffold.of(builderContext).openDrawer(),
+                  child:  CircleAvatar(
+                    backgroundImage: AssetImage("assets/image.png"),
+                    radius: 19,
+                  ),
+                ),
+              );
+            }
           ),
           Gap(8),
 
@@ -107,6 +109,7 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
+      drawer: NavBar(),
       body: _kTabPages[_currentTabIndex],
       bottomNavigationBar: bottomNavBar,
     );

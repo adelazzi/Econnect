@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:econnect/widgets/nots.dart';
 import '../../constant.dart';
 import '../../widgets/underline.dart';
-import 'Home_page.dart';
 
 
 
@@ -43,11 +42,7 @@ class notification extends StatelessWidget {
                       ),
                       child: InkWell(
                         onTap: (){
-                          Navigator.push(context,MaterialPageRoute(
-                              builder: (context) {
-                                return Home();
-                              }), );
-
+                          Navigator.pop(context);
                         },
                         child: Center(
                           child: Icon(Icons.arrow_back_ios_new_outlined),
