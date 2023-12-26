@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:econnect/screens/Root/Home_page.dart';
 
-import '../../constant.dart';
-import '../../widgets/Bloge.dart';
+import '../../../constant.dart';
+import '../../../widgets/Bloge.dart';
 
 class profile extends StatelessWidget {
   const profile({super.key});
@@ -270,26 +270,29 @@ class profile extends StatelessWidget {
                       child: ListView(
                         children: [
                           Blog(
-                              "Nature in Danger",
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
-                              " United Nation",
-                              "assets/ph1.png",
-                              "assets/Star.png",
-                              "assets/d!.png"),
+                              title: "Nature in Danger",
+                              desq:
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
+                              namecomp: " United Nation",
+                              phcomp: "assets/ph1.png",
+                              star: "assets/Star.png",
+                              mark: "assets/d!.png"),
                           Blog(
-                              "Together!",
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
-                              " Planet Mate",
-                              "assets/ph2.png",
-                              "assets/Star.png",
-                              "assets/dd.png"),
+                              title: "Together!",
+                              desq:
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
+                              namecomp: " Planet Mate",
+                              phcomp: "assets/ph2.png",
+                              star: "assets/Star.png",
+                              mark: "assets/dd.png"),
                           Blog(
-                              "Nature in Danger",
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
-                              " United Nation",
-                              "assets/ph1.png",
-                              "assets/Star.png",
-                              "assets/d!.png"),
+                              title: "Nature in Danger",
+                              desq:
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
+                              namecomp: " United Nation",
+                              phcomp: "assets/ph1.png",
+                              star: "assets/Star.png",
+                              mark: "assets/d!.png"),
                         ],
                       ),
                     ),

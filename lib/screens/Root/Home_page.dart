@@ -8,6 +8,7 @@ import '../../widgets/NavBar.dart';
 import '../../widgets/search_bar.dart';
 import 'home_pages/Blogs Screen.dart';
 import 'home_pages/Media.dart';
+import 'home_pages/calender_page.dart';
 import 'home_pages/game.dart';
 import 'home_pages/home.dart';
 import 'notready.dart';
@@ -29,7 +30,7 @@ class _HomeState extends State<Home> {
     final _kTabPages = <Widget>[
       homme(),
       media(),
-      Notready(),
+      calender_page(),
       Blogs_screen(),
       game_screen(),
     ];

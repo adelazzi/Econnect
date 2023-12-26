@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../constant.dart';
 import '../screens/Root/Ticket_page.dart';
-import '../screens/Root/profile.dart';
+import '../screens/Root/profile/profile.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
