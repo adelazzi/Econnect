@@ -15,8 +15,13 @@ class event extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           Container(
+            height: 203,
             decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("assets/eventt.jpg"))),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/eventt.jpg"),
+              ),
+            ),
             width: MediaQuery.sizeOf(context).width,
             child: Container(
               decoration: BoxDecoration(
@@ -25,7 +30,7 @@ class event extends StatelessWidget {
                     end: Alignment.topCenter,
                     colors: [
                       background,
-                      Colors.transparent,
+                      Colors.white10,
                     ]),
               ),
               child: Padding(
@@ -242,9 +247,6 @@ class event extends StatelessWidget {
   }
 }
 
-
-
-
 class my_tecket extends StatelessWidget {
   const my_tecket({super.key});
 
@@ -253,9 +255,9 @@ class my_tecket extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         extendBodyBehindAppBar: true,
-          appBar: AppBar(
-            elevation: 0,
-            backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
           automaticallyImplyLeading: false,
           actions: [
             Container(
@@ -275,21 +277,19 @@ class my_tecket extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10)),
                       child: InkWell(
                         onTap: () {
-                          Navigator.pop(
-                            context);
+                          Navigator.pop(context);
                         },
                         child: Center(
                           child: Icon(Icons.arrow_back_ios_new_outlined),
                         ),
                       ),
                     ),
-                   ],
+                  ],
                 ),
               ),
             )
           ],
         ),
-      
         body: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -373,7 +373,6 @@ class my_tecket extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               fontSize: 12)),
                     ),
-                    
                   ],
                 ),
               ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:econnect/screens/Root/Home_page.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constant.dart';
 import '../../../widgets/Bloge.dart';
+import '../../../widgets/event_card.dart';
 
 class Compinies_profile extends StatelessWidget {
   const Compinies_profile({super.key});
@@ -10,7 +12,7 @@ class Compinies_profile extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -96,19 +98,41 @@ class Compinies_profile extends StatelessWidget {
                             width: 80,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20)),
-                            child: Image.asset("assets/profile ph.png"),
+                            child: Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Image.asset(
+                                  "assets/even1.png",
+                                  fit: BoxFit.fill,
+                                )),
                           ),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Padding(
                                 padding:
                                     const EdgeInsets.only(left: 10, top: 8),
                                 child: Container(
-                                  child: Text("Nada Tis",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20,
-                                          color: Text_Title)),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text("Organization",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20,
+                                              color: Text_Title)),
+                                      Container(
+                                        margin: EdgeInsets.only(left: 4),
+                                        child: Icon(
+                                          Icons.verified,
+                                          size: 16,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -116,9 +140,11 @@ class Compinies_profile extends StatelessWidget {
                                     left: 8, top: 5, bottom: 7),
                                 child: Container(
                                   child: Text(
-                                    "@NadaTis",
+                                    "@organization",
                                     style: TextStyle(
-                                        color: Botton_desactif, fontSize: 12),
+                                      color: Botton_desactif,
+                                      fontSize: 12,
+                                    ),
                                   ),
                                 ),
                               )
@@ -209,32 +235,64 @@ class Compinies_profile extends StatelessWidget {
                       ),
                     ),
                     // edit profile
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Botton_actif,
-                            borderRadius: BorderRadius.circular(10)),
-                        padding: EdgeInsets.only(top: 5, bottom: 5),
-                        width: MediaQuery.sizeOf(context).width,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Edit Profile",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                  color: Colors.white),
-                              textAlign: TextAlign.center,
+                    Row(
+                      children: [
+                        // donate
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 4, right: 4, top: 16),
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Botton_actif, width: 2),
+                                borderRadius: BorderRadius.circular(10)),
+                            padding: EdgeInsets.only(top: 8, bottom: 8),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 5),
+                                  child: Text(
+                                    "Donate",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                        color: Botton_actif),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                SvgPicture.asset("assets/money.svg"),
+                              ],
                             ),
-                            Icon(
-                              Icons.mode_edit_outlined,
-                              color: Colors.white,
-                            ),
-                          ],
+                          ),
                         ),
-                      ),
+                        // Follow
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 4, right: 4, top: 16),
+                            decoration: BoxDecoration(
+                                color: Botton_actif,
+                                borderRadius: BorderRadius.circular(10)),
+                            padding: EdgeInsets.only(top: 8, bottom: 8),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 4),
+                                  child: Text(
+                                    "Follow",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                        color: Colors.white),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                SvgPicture.asset("assets/icons/follow.svg"),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -250,47 +308,66 @@ class Compinies_profile extends StatelessWidget {
                   indicatorColor: Botton_next,
                   tabs: [
                     Tab(
+                      text: "Events",
+                    ),
+                    Tab(
                       text: "Blogs",
                     ),
                     Tab(
-                      text: "Previous Event",
+                      text: "Post",
                     ),
                   ],
                 ),
               ),
               Container(
-                height: 324,
+                height: 314,
                 width: double.maxFinite,
                 child: TabBarView(
                   children: [
                     Container(
                       child: ListView(
                         children: [
-                          Blog(
-                              title: "Nature in Danger",
-                              desq:
-                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
-                              namecomp: " United Nation",
-                              phcomp: "assets/ph1.png",
-                              star: "assets/Star.png",
-                              mark: "assets/d!.png"),
-                          Blog(
-                              title: "Together!",
-                              desq:
-                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
-                              namecomp: " Planet Mate",
-                              phcomp: "assets/ph2.png",
-                              star: "assets/Star.png",
-                              mark: "assets/dd.png"),
-                          Blog(
-                              title: "Nature in Danger",
-                              desq:
-                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.rem ipsum dolor sit amet, consectetur adipiscing elit.",
-                              namecomp: " United Nation",
-                              phcomp: "assets/ph1.png",
-                              star: "assets/Star.png",
-                              mark: "assets/d!.png"),
+                          EventCard(
+                            eventTitle: 'Planet Cleanup',
+                            eventDescription:
+                                'Help us revive the garden of vector hugo...',
+                            eventParticipants: 14,
+                            eventDate: DateTime(2023, 05, 02),
+                            eventLocation: 'Paris',
+                          ),
+                          EventCard(
+                            eventTitle: 'Planet Cleanup',
+                            eventDescription:
+                                'Help us revive the garden of vector hugo...',
+                            eventParticipants: 14,
+                            eventDate: DateTime(2023, 05, 02),
+                            eventLocation: 'Paris',
+                          ),
+                          EventCard(
+                            eventTitle: 'Planet Cleanup',
+                            eventDescription:
+                                'Help us revive the garden of vector hugo...',
+                            eventParticipants: 14,
+                            eventDate: DateTime(2023, 05, 02),
+                            eventLocation: 'Paris',
+                          ),
+                          EventCard(
+                            eventTitle: 'Planet Cleanup',
+                            eventDescription:
+                                'Help us revive the garden of vector hugo...',
+                            eventParticipants: 14,
+                            eventDate: DateTime(2023, 05, 02),
+                            eventLocation: 'Paris',
+                          ),
                         ],
+                      ),
+                    ),
+                    Container(
+                      child: Center(
+                        child: Text(
+                          "Empty !!",
+                          style: TextStyle(color: Text_nor, fontSize: 20),
+                        ),
                       ),
                     ),
                     Container(

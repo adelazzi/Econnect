@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:table_calendar/table_calendar.dart';
 import '../../../constant.dart';
 import '../../../widgets/event_card.dart';

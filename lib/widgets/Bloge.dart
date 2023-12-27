@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../constant.dart';
 import '../screens/Root/blog_detail.dart';
+import '../screens/Root/profile/Companies_profile.dart';
 
 class Blog extends StatelessWidget {
   final String title;
@@ -85,26 +86,36 @@ class Blog extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 10),
-                          child: Image.asset(phcomp),
-                        ),
-                        Text(
-                          namecomp,
-                          style: TextStyle(color: Text_Title, fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      child: Image.asset(star),
-                    ),
-                  ],
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return Compinies_profile();
+                    }),
+                  );
+                },
+                child: Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(right: 10),
+                            child: Image.asset(phcomp),
+                          ),
+                          Text(
+                            namecomp,
+                            style: TextStyle(color: Text_Title, fontSize: 14),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        child: Image.asset(star),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

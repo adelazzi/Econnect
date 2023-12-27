@@ -37,8 +37,7 @@ class homme extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   children: [
                     listevent("All", "assets/all.png", Botton_actif),
-                    listevent(
-                        "Afforestation","assets/dd.png", Colors.black12),
+                    listevent("Afforestation", "assets/dd.png", Colors.black12),
                     listevent("Recyling", "assets/ddd.png", Colors.black12),
                   ],
                 ),
