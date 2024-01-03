@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:econnect/screens/Root/Home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constant.dart';
-import '../../../widgets/Bloge.dart';
+import '../../../widgets/Donate_botton.dart';
 import '../../../widgets/event_card.dart';
 
 class Compinies_profile extends StatelessWidget {
@@ -239,31 +239,7 @@ class Compinies_profile extends StatelessWidget {
                       children: [
                         // donate
                         Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(left: 4, right: 4, top: 16),
-                            decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Botton_actif, width: 2),
-                                borderRadius: BorderRadius.circular(10)),
-                            padding: EdgeInsets.only(top: 8, bottom: 8),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 5),
-                                  child: Text(
-                                    "Donate",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                        color: Botton_actif),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                                SvgPicture.asset("assets/money.svg"),
-                              ],
-                            ),
-                          ),
+                          child: Donate_botton(),
                         ),
                         // Follow
                         Expanded(

@@ -11,7 +11,6 @@ import 'home_pages/Media.dart';
 import 'home_pages/calender_page.dart';
 import 'home_pages/game.dart';
 import 'home_pages/home.dart';
-import 'notready.dart';
 
 class Home extends StatefulWidget {
   Home({super.key});
