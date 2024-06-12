@@ -1,6 +1,6 @@
 
 
-# <img src="https://github.com/adelazzi/adelazzi/assets/93773381/31dbe8d0-fd5f-45b9-8bec-35fe49fde701" alt="econnect" width="150" height="70"/>  ECOnnect: Your Ultimate Event Management App 
+# <img src="https://github.com/adelazzi/adelazzi/assets/93773381/31dbe8d0-fd5f-45b9-8bec-35fe49fde701" alt="econnect" width="200" height="70"/>  : Your Ultimate Event Management App 
 
 ECOnnect is a powerful phone application available for both Android and iOS, designed to help you organize and manage events more efficiently. Whether you are handling sponsors, coordinating volunteers, selling tickets, or promoting your event to a broader audience, ECOnnect has got you covered.
 
