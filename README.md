@@ -6,8 +6,8 @@ ECOnnect is a powerful phone application available for both Android and iOS, des
 
 Key Features:
 
-Sponsor Management: Easily track and manage your event sponsors.
-Volunteer Coordination: Streamline the process of recruiting and organizing volunteers.
-Ticket Sales: Simplify the sale of tickets with integrated purchasing options.
-Wide-Scale Promotion: Publish your event to reach a larger audience and maximize attendance.
+- Sponsor Management: Easily track and manage your event sponsors.
+- Volunteer Coordination: Streamline the process of recruiting and organizing volunteers.
+- Ticket Sales: Simplify the sale of tickets with integrated purchasing options.
+- Wide-Scale Promotion: Publish your event to reach a larger audience and maximize attendance.
 We are proud to announce that ECOnnect won first place at the second "Congrès de la Jeunesse Étudiante Francophone au Canada." Experience the future of event management with ECOnnect.
